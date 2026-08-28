@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="AppName">Telegram</string>
-    <string name="AppNameBeta">Telegram Beta</string>
+    <string name="AppName">KitGram</string>
+    <string name="AppNameBeta">KitGram</string>
     <string name="LanguageName">Русский</string>
     <string name="English">Английский</string>
     <string name="LanguageNameInEnglish">Russian</string>
     <string name="LanguageCode">ru</string>
     <string name="ContinueOnThisLanguage">Продолжить на русском</string>
+    <string name="KitGramSettings">KitGram</string>
+    <string name="KitGramSettingsValue">Функции мода</string>
+    <string name="KitGramFeatures">Функции KitGram</string>
+    <string name="KitGramKeepDeleted">Сохранять удалённые сообщения</string>
+    <string name="KitGramKeepEdited">Сохранять изменённые сообщения</string>
+    <string name="KitGramHideTyping">Скрывать статус печати</string>
+    <string name="KitGramHideReadTime">Скрывать время прочтения</string>
+    <string name="KitGramSettingsInfo">Настройки работают локально на этом устройстве. Некоторые функции приватности зависят от поведения серверов Telegram.</string>
     <!--signin view-->
     <string name="YourPhone">Ваш телефон</string>
     <string name="StartText">Проверьте код страны и введите свой номер телефона.</string>

@@ -126,6 +126,7 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
     private int passcodeRow;
     @Keep
     private int autoDeleteMesages;
+    private int kitGramRow;
     @Keep
     private int passkeysRow;
     private int sessionsDetailRow;
@@ -320,6 +321,8 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
                 if (getUserConfig().getGlobalTTl() >= 0) {
                     presentFragment(new AutoDeleteMessagesActivity());
                 }
+            } else if (position == kitGramRow) {
+                presentFragment(new KitGramSettingsActivity());
             } else if (position == blockedRow) {
                 presentFragment(new PrivacyUsersActivity());
             } else if (position == sessionsRow) {
@@ -712,6 +715,7 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
         securitySectionRow = rowCount++;
         passwordRow = rowCount++;
         autoDeleteMesages = rowCount++;
+        kitGramRow = rowCount++;
         passcodeRow = rowCount++;
         if (getMessagesController().config.settingsDisplayPasskeys.get() && Build.VERSION.SDK_INT >= 28 && BuildVars.SUPPORTS_PASSKEYS) {
             passkeysRow = rowCount++;
@@ -1037,7 +1041,7 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
                     position == newChatsRow && !getContactsController().getLoadingGlobalSettings() ||
                     position == emailLoginRow || position == paymentsClearRow || position == secretMapRow ||
                     position == contactsSyncRow || position == passportRow || position == contactsDeleteRow ||
-                    position == contactsSuggestRow || position == autoDeleteMesages || position == botsBiometryRow;
+                    position == contactsSuggestRow || position == autoDeleteMesages || position == kitGramRow || position == botsBiometryRow;
         }
 
         @Override
@@ -1304,6 +1308,8 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
                             value = getString("PasswordOff", R.string.PasswordOff);
                         }
                         textCell2.setTextAndValueAndIcon(getString("AutoDeleteMessages", R.string.AutoDeleteMessages), value, true, R.drawable.msg2_autodelete, true);
+                    } else if (position == kitGramRow) {
+                        textCell2.setTextAndValueAndIcon(getString(R.string.KitGramSettings), getString(R.string.KitGramSettingsValue), true, R.drawable.msg2_secret, true);
                     } else if (position == sessionsRow) {
                         String count = "";
                         if (devicesActivityPreload.getSessionsCount() == 0) {
@@ -1401,7 +1407,7 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
                 return 3;
             } else if (position == botsAndWebsitesShadowRow) {
                 return 4;
-            } else if (position == autoDeleteMesages || position == sessionsRow || position == emailLoginRow || position == passwordRow || position == passkeysRow || position == passcodeRow || position == blockedRow) {
+            } else if (position == autoDeleteMesages || position == kitGramRow || position == sessionsRow || position == emailLoginRow || position == passwordRow || position == passkeysRow || position == passcodeRow || position == blockedRow) {
                 return 5;
             }
             return 0;

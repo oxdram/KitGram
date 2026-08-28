@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="AppName">KitSave</string>
-    <string name="AppNameBeta">KitSave</string>
+    <string name="AppName">KitGram</string>
+    <string name="AppNameBeta">KitGram</string>
     <string name="LanguageName">English</string>
     <string name="English">English</string>
     <string name="LanguageNameInEnglish">English</string>
@@ -3591,6 +3591,14 @@
     <string name="ResetStatisticsAlert">Do you want to reset your usage statistics?</string>
     <!--privacy settings-->
     <string name="PrivacySettings">Privacy and Security</string>
+    <string name="KitGramSettings">KitGram</string>
+    <string name="KitGramSettingsValue">Mod features</string>
+    <string name="KitGramFeatures">KitGram features</string>
+    <string name="KitGramKeepDeleted">Keep deleted messages</string>
+    <string name="KitGramKeepEdited">Keep edited messages</string>
+    <string name="KitGramHideTyping">Hide typing status</string>
+    <string name="KitGramHideReadTime">Hide read time</string>
+    <string name="KitGramSettingsInfo">These settings work locally on this device. Some privacy features depend on Telegram server behavior.</string>
     <string name="PrivacyTitle">Privacy</string>
     <string name="PrivacyLastSeen">Last Seen &amp; Online</string>
     <string name="PrivacyMessagesContactsAndPremium">My Contacts and Premium users</string>
